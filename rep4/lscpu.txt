@@ -1,0 +1,25 @@
+Architecture:          x86_64
+CPU 操作モード:   32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+コアあたりのスレッド数:2
+ソケットあたりのコア数:2
+Socket(s):             1
+NUMA ノード数:     1
+ベンダー ID:       GenuineIntel
+CPU ファミリー:   6
+モデル:             37
+Model name:            Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
+ステッピング:    5
+CPU MHz:               2063.077
+CPU max MHz:           2400.0000
+CPU min MHz:           1199.0000
+BogoMIPS:              4787.70
+仮想化:             VT-x
+L1d キャッシュ:   32K
+L1i キャッシュ:   32K
+L2 キャッシュ:    256K
+L3 キャッシュ:    3072K
+NUMA node0 CPU(s):     0-3
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt aes lahf_lm pti tpr_shadow vnmi flexpriority ept vpid dtherm ida arat

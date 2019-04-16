@@ -1,0 +1,11 @@
+# #use "3.ml";;
+val list_len : 'a list -> int = <fun>
+val reverse : 'a list -> 'a list = <fun>
+# list_len ["int";"double";"char";"string"];;
+- : int = 4
+# list_len [5;5;9;2;0;8;7;3];;
+- : int = 8
+# reverse ["int";"double";"char";"string"];;
+- : string list = ["string"; "char"; "double"; "int"]
+# reverse [5;5;9;2;0;8;7;3];;
+- : int list = [3; 7; 8; 0; 2; 9; 5; 5]

@@ -1,0 +1,16 @@
+# #use "8-1.ml";;
+val append : 'a list -> 'a list -> 'a list = <fun>
+val index_rec : 'a list list -> int -> ('a * int) list = <fun>
+val n_index : 'a list list -> ('a * int) list = <fun>
+val append_index : 'a -> ('a * 'b) list -> 'b list = <fun>
+val delete : 'a -> ('a * 'b) list -> ('a * 'b) list = <fun>
+val compress : ('a * 'b) list -> ('a * 'b list) list = <fun>
+val index : 'a list list -> ('a * int list) list = <fun>
+# index [["red";"green";"blue"];["light-blue";"blue";"dark-blue"];["pink";"orange";"red"]];;
+- : (string * int list) list =
+[("red", [1; 3]); ("green", [1]); ("blue", [1; 2]); ("light-blue", [2]);
+ ("dark-blue", [2]); ("pink", [3]); ("orange", [3])]
+# index [[1;4;2;8;5;7];[3;1;4];[2;7;1;8]];;
+- : (int * int list) list =
+[(1, [1; 2; 3]); (4, [1; 2]); (2, [1; 3]); (8, [1; 3]); (5, [1]);
+ (7, [1; 3]); (3, [2])]

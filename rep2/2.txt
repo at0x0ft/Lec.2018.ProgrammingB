@@ -1,0 +1,16 @@
+# #use "2.ml";;
+val max : int list -> int = <fun>
+val append : 'a list -> 'a list -> 'a list = <fun>
+val map : ('a -> 'b) -> 'a list -> 'b list = <fun>
+# max  [3;1;4;1;5;9;2;6;5;8];;
+- : int = 9
+# max  [2;7;1;8;2;8];;
+- : int = 8
+# append [1;4;2;8;5;7] [5;0;5;0];;
+- : int list = [1; 4; 2; 8; 5; 7; 5; 0; 5; 0]
+# append ["apple";"banana";"orange"] ["tomato";"potato"];;
+- : string list = ["apple"; "banana"; "orange"; "tomato"; "potato"]
+# map (fun a -> 2 * a) [7;1;6];;
+- : int list = [14; 2; 12]
+# map (fun a -> a - 10) [3;8;6];;
+- : int list = [-7; -2; -4]

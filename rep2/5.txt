@@ -1,0 +1,13 @@
+# #use "5.ml";;
+val append : 'a list -> 'a list -> 'a list = <fun>
+val product : 'a list -> 'b list -> ('a * 'b) list = <fun>
+# append [2;3] [5;7;11];;
+- : int list = [2; 3; 5; 7; 11]
+# append ["piyo";"foo";"bar";"zoi"] ["hoge";"fuga"];;
+- : string list = ["piyo"; "foo"; "bar"; "zoi"; "hoge"; "fuga"]
+# product ["piyo";"foo";"bar";"zoi"] ["hoge";"fuga"];;
+- : (string * string) list =
+[("piyo", "hoge"); ("piyo", "fuga"); ("foo", "hoge"); ("foo", "fuga");
+ ("bar", "hoge"); ("bar", "fuga"); ("zoi", "hoge"); ("zoi", "fuga")]
+# product [2;3] [5;7;11];;
+- : (int * int) list = [(2, 5); (2, 7); (2, 11); (3, 5); (3, 7); (3, 11)]

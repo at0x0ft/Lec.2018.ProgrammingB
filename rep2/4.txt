@@ -1,0 +1,6 @@
+# #use "4.ml";;
+val inner_product : int list -> int list -> int = <fun>
+# inner_product [1;2] [2;-1];;
+- : int = 0
+# inner_product [3;8;9] [-5;-2;4];;
+- : int = 5

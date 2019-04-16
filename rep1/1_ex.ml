@@ -1,0 +1,18 @@
+(* 2*2行列fとgの積を計算する関数 *)
+let f_times_g (f11, f12, f21, f22) (g11, g12, g21, g22) =
+  (f11 * g11 + f12 * g21, f11 * g12 + f12 * g22, f21 * g11 + f22 * g21, f21 * g12 + f22 * g22)
+
+(* 2*2行列fのn乗を, 対数時間で計算する関数 *)
+let rec f_nth_pow f n =
+  if n = 1 then f
+  else if n mod 2 = 0 then f_nth_pow (f_times_g f f) (n / 2)
+  else f_times_g f (f_nth_pow (f_times_g f f) ((n - 1) / 2));;
+
+(* 2*2行列の(1,1)成分を射影する関数 *)
+let prj_f11 (f11, _, _, _) = f11;;
+
+(* フィボナッチ数列の第n項目を計算し, 返す関数 *)
+let fib n =
+  if n <= 1 then n
+  (* フィボナッチ数列の一般項を2次元ベクトルで表記する. この時, 2*2行列とみなして, (a, b, 0, 0)として代入している. *)
+  else prj_f11 (f_times_g (f_nth_pow (1, 1, 1, 0) (n - 1)) (1, 0, 0, 0));;

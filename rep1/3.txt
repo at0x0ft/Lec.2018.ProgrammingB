@@ -1,0 +1,18 @@
+let rec member a ls =
+  match ls with
+  [] -> false
+  | h::t -> (a=h) || member a t;;
+
+let rec difference a b =
+  match a with
+    [] -> []
+  | h::t -> if member h b
+            then difference t b
+            else h::difference t b;;
+
+
+# #use "3.ml";;
+val member : 'a -> 'a list -> bool = <fun>
+val difference : 'a list -> 'a list -> 'a list = <fun>
+# difference [1;3;6;10;14] [10;3];;
+- : int list = [1; 6; 14]

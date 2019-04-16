@@ -1,0 +1,1 @@
+let inner_product l1 l2 = List.fold_right (fun (a, b) i -> a * b + i) (List.combine l1 l2) 0;
